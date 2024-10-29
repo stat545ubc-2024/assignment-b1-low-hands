@@ -170,7 +170,7 @@ numeric dependent variable “no_of_accessible_parking_spaces”, then draw
 a jitter plot for them.
 
 ``` r
-my_plot(apt_buildings,"visitor_parking", "no_of_accessible_parking_spaces", 0.5)
+my_plot(apt_buildings,"visitor_parking", "no_of_accessible_parking_spaces", 0.3)
 ```
 
 ![](assignment-b1_files/figure-gfm/unnamed-chunk-6-1.png)<!-- -->
@@ -189,7 +189,7 @@ test_that("Function returns ggplot object",{
 })
 ```
 
-    ## Test passed 🥳
+    ## Test passed 🎊
 
 #### Test 2: Check the existance of input variables
 
@@ -199,7 +199,7 @@ test_that("The input variable doesn't exist in the dataset",{
 })
 ```
 
-    ## Test passed 😸
+    ## Test passed 🥳
 
 #### Test 3: Check the class of input variables
 
@@ -209,7 +209,7 @@ test_that("The type of input variable is not accepted",{
 })
 ```
 
-    ## Test passed 🌈
+    ## Test passed 🥇
 
 #### Test 4: Check if the missing values in variables are removed before plotting
 
@@ -235,15 +235,15 @@ test_that("The plot has only one layer and the layer uses point geometry",{
 })
 ```
 
-    ## Test passed 😀
+    ## Test passed 🥳
 
 #### Test 6: Check if the alpha transparency of the plot is euqal to the input argument ‘a’
 
 ``` r
 test_that("The transparency is equal",{
-  generated_plot <- my_plot(penguins, "species", "body_mass_g", 0.5)
-  expect_equal(generated_plot$layers[[1]]$aes_params$alpha, 0.5)
+  generated_plot <- my_plot(penguins, "species", "body_mass_g", 0.7)
+  expect_equal(generated_plot$layers[[1]]$aes_params$alpha, 0.7)
 })
 ```
 
-    ## Test passed 🥇
+    ## Test passed 🎉
