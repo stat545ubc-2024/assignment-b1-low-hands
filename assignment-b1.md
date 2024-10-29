@@ -31,7 +31,7 @@ my function.
 **Notice:**
 
 - This function only works in **two situations**:
-  - the two variables are both numeric
+  - the two variables are both numeric.
   - the independent variable is categorical and the dependent variable
     is numeric.
 - Before generating plots, **the missing values in the variables will be
@@ -189,7 +189,7 @@ test_that("Function returns ggplot object", {
 })
 ```
 
-    ## Test passed 😸
+    ## Test passed 🥇
 
 #### Test 2: Check the existance of input variables
 
@@ -199,7 +199,7 @@ test_that("The input variable doesn't exist in the dataset", {
 })
 ```
 
-    ## Test passed 🥇
+    ## Test passed 🥳
 
 #### Test 3: Check the class of input variables
 
@@ -209,7 +209,7 @@ test_that("The type of input variable is not accepted", {
 })
 ```
 
-    ## Test passed 🎉
+    ## Test passed 😀
 
 #### Test 4: Check if the missing values in variables are removed before plotting
 
@@ -235,7 +235,7 @@ test_that("The plot has only one layer and the layer uses point geometry", {
 })
 ```
 
-    ## Test passed 🥳
+    ## Test passed 😸
 
 #### Test 6: Check if the alpha transparency of the plot is euqal to the input argument ‘a’
 
@@ -246,4 +246,4 @@ test_that("The transparency is equal", {
 })
 ```
 
-    ## Test passed 🎉
+    ## Test passed 🥳

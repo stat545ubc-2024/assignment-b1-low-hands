@@ -20,7 +20,7 @@ To be specific, if I want to see the distribution of two numeric variables, I ca
 **Notice:** 
 
 - This function only works in **two situations**:
-  - the two variables are both numeric 
+  - the two variables are both numeric.
   - the independent variable is categorical and the dependent variable is numeric.
   
 - Before generating plots, **the missing values in the variables will be removed**. For example, a 'NA' category isn't included in the jitter plot.
