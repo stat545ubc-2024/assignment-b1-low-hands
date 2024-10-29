@@ -1,12 +1,12 @@
 # Assignment Overview
 Author:  [*Rui Guo*](https://github.com/low-hands)
 ### Assignment B1:
+
 #### Learning Objective:
-By the end of this milestone, you should:
 
-This assignment covers making a function in R, documenting it, and testing it.
+This assignment covers making a function in R, documenting it, and testing it. 
 
-This is the first assignment of the four.
+It is the first assignment of the four.
 
 ## Repository Contents
 
