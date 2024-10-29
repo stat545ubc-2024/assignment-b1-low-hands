@@ -12,7 +12,7 @@ It is the first assignment of the four.
 
 - **assignment-b1.Rmd**: This is the R Markdown file for Assignment B1.
 - **assignment-b2.md**: This is the knitted Markdown file which is up-to-date with its Rmd Source.
-- **assignment-b1_files**: This is the directory which contains the images generated from the R Markdown file, ensuring it can be shown in the Markdown file.
+- **assignment-b1_files/figure-gfm**: This is the directory which contains the images generated from the R Markdown file, ensuring it can be shown in the Markdown file.
 - **README.md**: Describe the assignment.
 
 ## How to Run the Code
