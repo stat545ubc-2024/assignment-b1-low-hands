@@ -1,6 +1,6 @@
 Assignment-B1
 ================
-2024-10-29
+Rui Guo
 
 ### Load Libraries
 
@@ -130,7 +130,7 @@ Choose the numeric independent variable “bill_length_mm” and the numeric
 dependent variable “body_mass_g”, then draw a scatter plot for them.
 
 ``` r
-my_plot(penguins,"bill_length_mm", "body_mass_g",0.5)
+my_plot(penguins, "bill_length_mm", "body_mass_g", 0.5)
 ```
 
 ![](assignment-b1_files/figure-gfm/unnamed-chunk-4-1.png)<!-- -->
@@ -170,7 +170,7 @@ numeric dependent variable “no_of_accessible_parking_spaces”, then draw
 a jitter plot for them.
 
 ``` r
-my_plot(apt_buildings,"visitor_parking", "no_of_accessible_parking_spaces", 0.3)
+my_plot(apt_buildings, "visitor_parking", "no_of_accessible_parking_spaces", 0.3)
 ```
 
 ![](assignment-b1_files/figure-gfm/unnamed-chunk-6-1.png)<!-- -->
@@ -183,38 +183,38 @@ properties of the output plots.
 #### Test 1: Check the return type of the function
 
 ``` r
-test_that("Function returns ggplot object",{
-  generated_plot <- my_plot(penguins, "species", "flipper_length_mm",0.5)
-  expect_is(generated_plot,"ggplot")
+test_that("Function returns ggplot object", {
+  generated_plot <- my_plot(penguins, "species", "flipper_length_mm", 0.5)
+  expect_is(generated_plot, "ggplot")
 })
 ```
 
-    ## Test passed 🎊
+    ## Test passed 😸
 
 #### Test 2: Check the existance of input variables
 
 ``` r
-test_that("The input variable doesn't exist in the dataset",{
-  expect_error( my_plot(penguins, "abc", "flipper_length_mm",0.5),"independent variable abc is not in the dataset")
-})
-```
-
-    ## Test passed 🥳
-
-#### Test 3: Check the class of input variables
-
-``` r
-test_that("The type of input variable is not accepted",{
-  expect_error( my_plot(apt_buildings, "no_of_units", "window_type",0.5),"dependent variable is not numeric")
+test_that("The input variable doesn't exist in the dataset", {
+  expect_error(my_plot(penguins, "abc", "flipper_length_mm", 0.5), "independent variable abc is not in the dataset")
 })
 ```
 
     ## Test passed 🥇
 
+#### Test 3: Check the class of input variables
+
+``` r
+test_that("The type of input variable is not accepted", {
+  expect_error(my_plot(apt_buildings, "no_of_units", "window_type", 0.5), "dependent variable is not numeric")
+})
+```
+
+    ## Test passed 🎉
+
 #### Test 4: Check if the missing values in variables are removed before plotting
 
 ``` r
-test_that("The missing values are removed",{
+test_that("The missing values are removed", {
   generated_plot <- my_plot(penguins, "species", "flipper_length_mm", 0.5)
   expected_data <- penguins %>%
     select(species, flipper_length_mm) %>%
@@ -223,12 +223,12 @@ test_that("The missing values are removed",{
 })
 ```
 
-    ## Test passed 😸
+    ## Test passed 🥳
 
 #### Test 5: Check the properties of the layers of the plot
 
 ``` r
-test_that("The plot has only one layer and the layer uses point geometry",{
+test_that("The plot has only one layer and the layer uses point geometry", {
   generated_plot <- my_plot(penguins, "island", "body_mass_g", 0.5)
   expect_equal(length(generated_plot$layers), 1)
   expect_true(inherits(generated_plot$layers[[1]]$geom, "GeomPoint"))
@@ -240,7 +240,7 @@ test_that("The plot has only one layer and the layer uses point geometry",{
 #### Test 6: Check if the alpha transparency of the plot is euqal to the input argument ‘a’
 
 ``` r
-test_that("The transparency is equal",{
+test_that("The transparency is equal", {
   generated_plot <- my_plot(penguins, "species", "body_mass_g", 0.7)
   expect_equal(generated_plot$layers[[1]]$aes_params$alpha, 0.7)
 })
